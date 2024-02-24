@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView } from 'react-native'
+import React, {Component} from 'react';
+import {Text, StyleSheet, View, ScrollView} from 'react-native';
 
 export default class FlexDirection extends Component {
   render() {
@@ -35,7 +35,7 @@ export default class FlexDirection extends Component {
           </View>
         </ScrollView>
       </View>
-    )
+    );
   }
 }
 
@@ -44,16 +44,16 @@ const styles = StyleSheet.create({
     height: 150,
     margin: 10,
     borderWidth: 1,
-    borderColor: '#ddd'
+    borderColor: '#ddd',
   },
   h2: {
     fontSize: 30,
     marginHorizontal: 10,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   h3: {
     fontSize: 24,
-    marginHorizontal: 10
+    marginHorizontal: 10,
   },
   itemBase: {
     height: 30,
@@ -61,18 +61,18 @@ const styles = StyleSheet.create({
     borderColor: 'red',
     backgroundColor: '#dfb',
     padding: 4,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   flexColumn: {
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   flexColumnReverse: {
-    flexDirection: 'column-reverse'
+    flexDirection: 'column-reverse',
   },
   flexRow: {
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   flexRowReverse: {
-    flexDirection: 'row-reverse'
-  }
-})
+    flexDirection: 'row-reverse',
+  },
+});

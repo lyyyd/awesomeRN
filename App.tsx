@@ -25,6 +25,40 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+// import Index from './src_01_StyleSheet';
+// import Index from './src_02_Flexbox/FlexDirection'
+// import Index from './src_02_Flexbox/JustifyContent';
+// import Index from './src_02_Flexbox/AlignItems';
+// import Index from './src_02_Flexbox/Flex';
+// import Index from './src_03_Dimensions';
+// import Index from './src_04_Alert_Button';
+import Index from './src_05_Switch_StatusBar';
+// import Index from './src_06_ActivityIndicator'
+// import Index from './src_07_Image'
+// import Index from './src_08_TextInput'
+// import Index from './src_09_Touchable'
+// import Index from './src_10_ScrollView'
+// import Index from './src_11_SectionList'
+// import Index from './src_12_FlatList'
+// import Index from './src_13_Animated'
+// import Index from './src_14_WebView/WebViewURI'
+// import Index from './src_14_WebView/WebViewHTML'
+// import Index from './src_15_Picker'
+// import Index from './src_16_Swiper'
+// import Index from './src_17_AsyncStorage'
+// import Index from './src_18_Geolocation'
+// import Index from './src_19_Camera'
+// import Index from './src_20_ImagePicker'
+// import Index from './src_21_Loading'
+// import Index from './src_22_StackNavigator'
+// import Index from './src_23_BottomTab'
+// import Index from './src_24_DrawerNavigator'
+// import Index from './src_25_MaterailTopTabNavigator'
+// import Index from './src_26_NestingNavigation'
+// import Index from './src_27_PassingParameters'
+// import Index from './src_28_API'
+// import Index from './src_29_project'
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -71,12 +105,13 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        {/* <Header /> */}
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
+          <Index />
+          {/* <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
@@ -89,7 +124,7 @@ function App(): React.JSX.Element {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
+          <LearnMoreLinks /> */}
         </View>
       </ScrollView>
     </SafeAreaView>
