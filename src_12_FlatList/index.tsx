@@ -1,10 +1,18 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View, FlatList, StatusBar,SafeAreaView, TouchableOpacity } from 'react-native'
+import React, {Component} from 'react';
+import {
+  Text,
+  StyleSheet,
+  View,
+  FlatList,
+  StatusBar,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 
 export default class index extends Component {
   constructor() {
-    super()
-    
+    super();
+
     this.state = {
       isLoading: false,
       selectedId: null,
@@ -41,42 +49,42 @@ export default class index extends Component {
           id: '8',
           title: '社会',
         },
-      ]
-    }
+      ],
+    };
   }
 
-  renderItem = ({ index, item }) => {
-    console.log(item)
-    const backgroundColor = item.id === this.state.selectedId ? '#dfb' : '#f9c2ff'
+  renderItem = ({index, item}) => {
+    console.log(item);
+    const backgroundColor =
+      item.id === this.state.selectedId ? '#dfb' : '#f9c2ff';
     return (
-      <TouchableOpacity 
-        style={[styles.item, { backgroundColor }]}
+      <TouchableOpacity
+        style={[styles.item, {backgroundColor}]}
         onPress={() => {
           this.setState({
-            selectedId: item.id
-          })
-        }} 
-      >
+            selectedId: item.id,
+          });
+        }}>
         <Text style={styles.title}>{item.title}</Text>
       </TouchableOpacity>
     );
-  }
+  };
 
   loadData = () => {
     this.setState({
-      isLoading: true
-    })
+      isLoading: true,
+    });
 
     // 模拟网络请求
     setTimeout(() => {
       // 模拟请求数据
-      alert('刷新请求数据')
-      
+      alert('刷新请求数据');
+
       this.setState({
-          isLoading: false,
-      })
+        isLoading: false,
+      });
     }, 2000);
-  }
+  };
 
   render() {
     return (
@@ -91,38 +99,33 @@ export default class index extends Component {
           numColumns={1} // 指定列数，数据项必须登高 - 无法支持瀑布流
           inverted={false} // 列表反转
           extraData={this.state.selectedId}
-
           ItemSeparatorComponent={() => {
             // 声明项目之间的分隔符
-            return <View style={[styles.itemSeporator]}></View>
+            return <View style={[styles.itemSeporator]}></View>;
           }}
           ListEmptyComponent={() => {
             // 列表数据为空时，展示的组件
-            return <Text style={{fontSize: 30}}>空空如也！</Text>
+            return <Text style={{fontSize: 30}}>空空如也！</Text>;
           }}
-
           // 下拉刷新
           refreshing={this.state.isLoading}
           onRefresh={this.loadData}
-
           // 上拉刷新
           onEndReachedThreshold={0.1} // 声明触底的比率，0.1表示距离底部还有10%
           onEndReached={() => {
-            alert('到底了')
+            alert('到底了');
           }}
-
           ListHeaderComponent={() => {
             // 声明列表的头部组件
-            return <Text style={[styles.header]}>列表头部</Text>
+            return <Text style={[styles.header]}>列表头部</Text>;
           }}
           ListFooterComponent={() => {
             // 声明列表的尾部组件
-            return <Text style={[styles.footer]}>没有更多了</Text>
+            return <Text style={[styles.footer]}>没有更多了</Text>;
           }}
-
         />
       </SafeAreaView>
-    )
+    );
   }
 }
 
@@ -136,23 +139,23 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
-    height: 80
+    height: 80,
   },
   itemSeporator: {
     borderBottomWidth: 1,
     borderBottomColor: 'red',
-    marginHorizontal: 20
+    marginHorizontal: 20,
   },
   title: {
     fontSize: 32,
   },
   header: {
-    fontSize: 30, 
-    margin: 20
+    fontSize: 30,
+    margin: 20,
   },
   footer: {
-    fontSize: 20, 
-    textAlign: 'center', 
-    marginVertical: 40
-  }
+    fontSize: 20,
+    textAlign: 'center',
+    marginVertical: 40,
+  },
 });

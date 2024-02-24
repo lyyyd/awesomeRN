@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
+import React, {Component} from 'react';
+import {Text, StyleSheet, View} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 
 export default class index extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
-      color: 'white'
-    }
+      color: 'white',
+    };
   }
   render() {
     return (
@@ -24,7 +24,7 @@ export default class index extends Component {
           <Picker.Item label="红色" value="red" />
         </Picker>
       </View>
-    )
+    );
   }
 }
 
@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
-  }
-})
+    alignItems: 'center',
+  },
+});

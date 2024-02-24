@@ -37,16 +37,16 @@ import {
 // import Index from './src_07_Image';
 // import Index from './src_08_TextInput';
 // import Index from './src_09_Touchable';
-import Index from './src_10_ScrollView';
-// import Index from './src_11_SectionList'
-// import Index from './src_12_FlatList'
-// import Index from './src_13_Animated'
-// import Index from './src_14_WebView/WebViewURI'
-// import Index from './src_14_WebView/WebViewHTML'
-// import Index from './src_15_Picker'
-// import Index from './src_16_Swiper'
-// import Index from './src_17_AsyncStorage'
-// import Index from './src_18_Geolocation'
+// import Index from './src_10_ScrollView';
+// import Index from './src_11_SectionList';
+// import Index from './src_12_FlatList';
+// import Index from './src_13_Animated';
+// import Index from './src_14_WebView/WebViewURI';
+// import Index from './src_14_WebView/WebViewHTML';
+// import Index from './src_15_Picker';
+// import Index from './src_16_Swiper';
+// import Index from './src_17_AsyncStorage';
+import Index from './src_18_Geolocation';
 // import Index from './src_19_Camera'
 // import Index from './src_20_ImagePicker'
 // import Index from './src_21_Loading'
