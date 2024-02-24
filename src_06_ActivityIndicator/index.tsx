@@ -1,11 +1,17 @@
-import React from 'react'
-import { StyleSheet, Text, View, ActivityIndicator, Platform } from 'react-native'
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ActivityIndicator,
+  Platform,
+} from 'react-native';
 
 export default function index() {
   if (Platform.OS === 'android') {
-    alert('当前是安卓应用')
+    alert('当前是安卓应用');
   } else if (Platform.OS === 'ios') {
-    alert('当前应用是 iOS')
+    alert('当前应用是 iOS');
   }
 
   return (
@@ -16,12 +22,12 @@ export default function index() {
       <ActivityIndicator color="#00d0ff" size={70} />
       <ActivityIndicator color="red" size={100} />
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    justifyContent: 'space-around'
-  }
-})
+    flex: 1,
+    justifyContent: 'space-around',
+  },
+});

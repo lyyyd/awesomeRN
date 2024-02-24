@@ -1,19 +1,26 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View, TextInput, Dimensions, Button } from 'react-native'
+import React, {Component} from 'react';
+import {
+  Text,
+  StyleSheet,
+  View,
+  TextInput,
+  Dimensions,
+  Button,
+} from 'react-native';
 
 export default class index extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       username: '',
-      password: ''
-    }
+      password: '',
+    };
   }
 
   doLogin = () => {
-    alert(this.state.username)
-  }
+    alert(this.state.username);
+  };
 
   render() {
     return (
@@ -22,10 +29,10 @@ export default class index extends Component {
           style={[styles.input]}
           placeholder="请输入用户名"
           value={this.state.username}
-          onChangeText={(val) => {
+          onChangeText={val => {
             this.setState({
-              username: val
-            })
+              username: val,
+            });
           }}
         />
 
@@ -34,10 +41,10 @@ export default class index extends Component {
           placeholder="请输入密码"
           value={this.state.password}
           secureTextEntry={true}
-          onChangeText={(val) => {
+          onChangeText={val => {
             this.setState({
-              password: val
-            })
+              password: val,
+            });
           }}
         />
 
@@ -61,29 +68,27 @@ export default class index extends Component {
           textAlignVertical="top"
         />
 
-
-
         <View style={[styles.btn]}>
           <Button title="登陆" onPress={this.doLogin} />
         </View>
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   input: {
     width: Dimensions.get('window').width - 20,
     margin: 10,
     borderWidth: 1,
     borderColor: 'red',
-    paddingHorizontal: 5
+    paddingHorizontal: 5,
   },
   btn: {
-    margin: 10
-  }
-})
+    margin: 10,
+  },
+});

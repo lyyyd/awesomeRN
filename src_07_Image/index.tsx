@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image, Dimensions } from 'react-native'
+import React, {Component} from 'react';
+import {Text, StyleSheet, View, Image, Dimensions} from 'react-native';
 
 export default class index extends Component {
   render() {
     return (
       <View style={[styles.container]}>
-        <Image
-          style={[styles.itemImage]}
-          source={require('./images/2.jpg')}
-        />
+        <Image style={[styles.itemImage]} source={require('./images/2.jpg')} />
 
         <Image
           style={styles.tinyLogo}
@@ -19,12 +16,11 @@ export default class index extends Component {
         <Image
           style={styles.logo}
           source={{
-            uri:
-              'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
+            uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
           }}
         />
       </View>
-    )
+    );
   }
 }
 
@@ -32,20 +28,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   itemImage: {
     height: 200,
     width: Dimensions.get('window').width,
-    marginVertical: 20
+    marginVertical: 10,
   },
   tinyLogo: {
     width: 100,
     height: 100,
-    marginVertical: 20
+    marginVertical: 20,
   },
   logo: {
     width: 66,
     height: 58,
   },
-})
+});
