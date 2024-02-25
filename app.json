@@ -1,4 +1,14 @@
 {
   "name": "awesomeRN",
-  "displayName": "awesomeRN"
+  "displayName": "awesomeRN",
+  "expo": {
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ]
+    ]
+  }
 }

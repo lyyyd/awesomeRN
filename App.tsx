@@ -46,8 +46,9 @@ import {
 // import Index from './src_15_Picker';
 // import Index from './src_16_Swiper';
 // import Index from './src_17_AsyncStorage';
-import Index from './src_18_Geolocation';
-// import Index from './src_19_Camera'
+// import Index from './src_18_Geolocation';
+// import Index from './src_19_Camera';
+import Index from './src_19_Camera/expo-camera';
 // import Index from './src_20_ImagePicker'
 // import Index from './src_21_Loading'
 // import Index from './src_22_StackNavigator'
@@ -58,6 +59,9 @@ import Index from './src_18_Geolocation';
 // import Index from './src_27_PassingParameters'
 // import Index from './src_28_API'
 // import Index from './src_29_project'
+
+// import Constants from 'expo-constants';
+// console.log(Constants.systemFonts);
 
 type SectionProps = PropsWithChildren<{
   title: string;

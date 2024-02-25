@@ -8,6 +8,13 @@ buildscript {
         kotlinVersion = "1.8.0"
     }
     repositories {
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+        jcenter()
         google()
         mavenCentral()
     }
@@ -15,6 +22,18 @@ buildscript {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+    }
+    allprojects {
+        repositories {
+
+            // * Your other repositories here *
+
+            // * Add a new maven block after other repositories / blocks *
+            maven {
+                // expo-camera bundles a custom com.google.android:cameraview
+                url "$rootDir/../node_modules/expo-camera/android/maven"
+            }
+        }
     }
 }
 

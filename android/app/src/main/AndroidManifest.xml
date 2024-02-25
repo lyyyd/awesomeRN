@@ -10,6 +10,12 @@
     <!-- Optional permissions -->
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
+    <!-- Added permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Optional permissions -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
       android:name=".MainApplication"
       android:label="@string/app_name"
