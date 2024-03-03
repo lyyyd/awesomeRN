@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View, ActivityIndicator } from 'react-native'
+import React, {Component} from 'react';
+import {Text, StyleSheet, View, ActivityIndicator} from 'react-native';
 
 export default class index extends Component {
   render() {
     return (
       <View style={[styles.container]}>
         <View style={[styles.loading]}>
-          <ActivityIndicator color={"white"} />
+          <ActivityIndicator color={'white'} />
           <Text style={[styles.loadingTitle]}>加载中......</Text>
         </View>
       </View>
-    )
+    );
   }
 }
 
@@ -18,18 +18,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   loading: {
     backgroundColor: '#999',
     height: 100,
     width: 150,
     borderRadius: 20,
-    padding: 20
+    padding: 20,
   },
   loadingTitle: {
     textAlign: 'center',
     color: 'white',
-    marginTop: 20
-  }
-})
+    marginTop: 20,
+  },
+});
