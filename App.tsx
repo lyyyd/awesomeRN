@@ -60,8 +60,8 @@ import {NavigationContainer} from '@react-navigation/native';
 // import Index from './src_24_DrawerNavigator/App';
 // import Index from './src_25_MaterailTopTabNavigator';
 // import Index from './src_26_NestingNavigation';
-import Index from './src_27_PassingParameters';
-// import Index from './src_28_API'
+// import Index from './src_27_PassingParameters';
+import Index from './src_28_API';
 // import Index from './src_29_project'
 
 // import Constants from 'expo-constants';
