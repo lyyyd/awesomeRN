@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {Component} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {NavigationContainer} from '@react-navigation/native';
 
 // import Index from './src_01_StyleSheet';
 // import Index from './src_02_Flexbox/FlexDirection'
@@ -51,8 +52,9 @@ import {
 // import Index from './src_19_Camera/expo-camera';
 // import Index from './src_20_ImagePicker';
 // import Index from './src_20_ImagePicker/App';
-import Index from './src_21_Loading';
-// import Index from './src_22_StackNavigator'
+// import Index from './src_21_Loading';
+// import Index from './src_22_StackNavigator';
+import Index from './src_22_StackNavigator/App';
 // import Index from './src_23_BottomTab'
 // import Index from './src_24_DrawerNavigator'
 // import Index from './src_25_MaterailTopTabNavigator'
@@ -94,46 +96,59 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   );
 }
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+// function App(): React.JSX.Element {
+//   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+//   const backgroundStyle = {
+//     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+//   };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        {/* <Header /> */}
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Index />
-          {/* <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks /> */}
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+//   return (
+//     <NavigationContainer>
+//       <SafeAreaView style={backgroundStyle}>
+//         <StatusBar
+//           barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+//           backgroundColor={backgroundStyle.backgroundColor}
+//         />
+//         <ScrollView
+//           contentInsetAdjustmentBehavior="automatic"
+//           style={backgroundStyle}>
+//           {/* <Header /> */}
+//           <View
+//             style={{
+//               backgroundColor: isDarkMode ? Colors.black : Colors.white,
+//             }}>
+//             <Index />
+
+//             {/* <Section title="Step One">
+//             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+//             screen and then come back to see your edits.
+//           </Section>
+//           <Section title="See Your Changes">
+//             <ReloadInstructions />
+//           </Section>
+//           <Section title="Debug">
+//             <DebugInstructions />
+//           </Section>
+//           <Section title="Learn More">
+//             Read the docs to discover what to do next:
+//           </Section>
+//           <LearnMoreLinks /> */}
+//           </View>
+//         </ScrollView>
+//       </SafeAreaView>
+//     </NavigationContainer>
+//   );
+// }
+
+export default class App extends Component {
+  render() {
+    return (
+      <NavigationContainer>
+        <Index />
+      </NavigationContainer>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -155,4 +170,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+// export default App;
