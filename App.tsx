@@ -48,8 +48,9 @@ import {
 // import Index from './src_17_AsyncStorage';
 // import Index from './src_18_Geolocation';
 // import Index from './src_19_Camera';
-import Index from './src_19_Camera/expo-camera';
-// import Index from './src_20_ImagePicker'
+// import Index from './src_19_Camera/expo-camera';
+// import Index from './src_20_ImagePicker';
+import Index from './src_20_ImagePicker/App';
 // import Index from './src_21_Loading'
 // import Index from './src_22_StackNavigator'
 // import Index from './src_23_BottomTab'
