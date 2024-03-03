@@ -1,8 +1,8 @@
-import actionTypes from '../actions/actionTypes'
+import actionTypes from '../actions/actionTypes';
 
 const initState = {
-  isLogin: false
-}
+  isLogin: false,
+};
 
 export default (state = initState, action) => {
   switch (action.type) {
@@ -10,13 +10,13 @@ export default (state = initState, action) => {
       return {
         ...state,
         ...action.payload,
-        isLogin: true
-      }
+        isLogin: true,
+      };
     case actionTypes.LOGIN_FAILED:
       return {
-        isLogin: false
-      }
+        isLogin: false,
+      };
     default:
-      return state
+      return state;
   }
-}
+};

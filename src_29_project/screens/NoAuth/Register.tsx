@@ -1,23 +1,22 @@
 import React from 'react';
-import { 
-  View, 
-  Text, 
-  Button, 
-  TouchableOpacity, 
+import {
+  View,
+  Text,
+  Button,
+  TouchableOpacity,
   Dimensions,
   TextInput,
   Platform,
   StyleSheet,
   ScrollView,
   StatusBar,
-  ImageBackground
+  ImageBackground,
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 
 const Register = ({navigation}) => {
-
   const [data, setData] = React.useState({
     username: '',
     password: '',
@@ -27,132 +26,130 @@ const Register = ({navigation}) => {
     confirmSecureTextEntry: true,
   });
 
-  const validateUsername = (val) => {
+  const validateUsername = val => {
     if (val.length >= 2) {
       setData({
         ...data,
         username: val,
-        validateUsername: true
+        validateUsername: true,
       });
     } else {
       setData({
         ...data,
         username: val,
-        validateUsername: false
+        validateUsername: false,
       });
     }
-  }
+  };
 
-  const handlePasswordChange = (val) => {
+  const handlePasswordChange = val => {
     setData({
       ...data,
-      password: val
+      password: val,
     });
-  }
+  };
 
-  const handleConfirmPasswordChange = (val) => {
+  const handleConfirmPasswordChange = val => {
     setData({
       ...data,
-      confirmPassword: val
+      confirmPassword: val,
     });
-  }
+  };
 
   const updateSecureTextEntry = () => {
     setData({
       ...data,
-      secureTextEntry: !data.secureTextEntry
+      secureTextEntry: !data.secureTextEntry,
     });
-  }
+  };
 
   const updateConfirmSecureTextEntry = () => {
     setData({
       ...data,
-      confirmSecureTextEntry: !data.confirmSecureTextEntry
+      confirmSecureTextEntry: !data.confirmSecureTextEntry,
     });
-  }
+  };
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('../../images/bg3.jpeg')} style={[styles.bgImage]}>
-        <StatusBar backgroundColor='#009387' barStyle="light-content"/>
+      <ImageBackground
+        source={require('../../images/bg3.jpeg')}
+        style={[styles.bgImage]}>
+        <StatusBar backgroundColor="#009387" barStyle="light-content" />
         <View style={styles.header}>
           <Text style={styles.textHeader}>用户注册</Text>
         </View>
 
-        <Animatable.View animation="fadeInUpBig" style={styles.footer} >
+        <Animatable.View animation="fadeInUpBig" style={styles.footer}>
           <ScrollView>
             <View style={styles.action}>
               <Ionicons name={'person-outline'} size={20} />
-              <TextInput 
+              <TextInput
                 placeholder="用户名"
                 style={styles.textInput}
-                onChangeText={(val) => validateUsername(val)}
+                onChangeText={val => validateUsername(val)}
               />
-              {
-                data.validateUsername
-                ? 
-                <Animatable.View animation="bounceIn" >
+              {data.validateUsername ? (
+                <Animatable.View animation="bounceIn">
                   <Ionicons name={'checkmark-circle-outline'} size={20} />
                 </Animatable.View>
-                : 
-                null
-              }
+              ) : null}
             </View>
 
             <View style={styles.action}>
               <Ionicons name={'lock-closed-outline'} size={20} />
-              <TextInput 
+              <TextInput
                 placeholder="密码"
                 secureTextEntry={data.secureTextEntry ? true : false}
                 style={styles.textInput}
-                onChangeText={(val) => handlePasswordChange(val)}
+                onChangeText={val => handlePasswordChange(val)}
               />
-              <TouchableOpacity onPress={updateSecureTextEntry} >
-              {
-                data.secureTextEntry
-                ? 
-                <Ionicons name={'eye-off-outline'} size={20} />
-                :
-                <Ionicons name={'eye-outline'} size={20} />
-              }
+              <TouchableOpacity onPress={updateSecureTextEntry}>
+                {data.secureTextEntry ? (
+                  <Ionicons name={'eye-off-outline'} size={20} />
+                ) : (
+                  <Ionicons name={'eye-outline'} size={20} />
+                )}
               </TouchableOpacity>
             </View>
 
             <View style={styles.action}>
               <Ionicons name={'lock-closed-outline'} size={20} />
-              <TextInput 
+              <TextInput
                 placeholder="确认密码"
                 secureTextEntry={data.confirmSecureTextEntry ? true : false}
                 style={styles.textInput}
-                onChangeText={(val) => handleConfirmPasswordChange(val)}
+                onChangeText={val => handleConfirmPasswordChange(val)}
               />
-              <TouchableOpacity onPress={updateConfirmSecureTextEntry} >
-              {
-                data.confirmSecureTextEntry
-                ? 
-                <Ionicons name={'eye-off-outline'} size={20} />
-                :
-                <Ionicons name={'eye-outline'} size={20} />
-              }
+              <TouchableOpacity onPress={updateConfirmSecureTextEntry}>
+                {data.confirmSecureTextEntry ? (
+                  <Ionicons name={'eye-off-outline'} size={20} />
+                ) : (
+                  <Ionicons name={'eye-outline'} size={20} />
+                )}
               </TouchableOpacity>
             </View>
-            
+
             <View style={styles.button}>
-              <TouchableOpacity style={styles.signIn} onPress={() => {}} >
-                <LinearGradient colors={['#08d4c4', '#01ab9d']} style={styles.signIn} >
-                  <Text style={[styles.textSign, { color:'#fff' }]}>注册</Text>
+              <TouchableOpacity style={styles.signIn} onPress={() => {}}>
+                <LinearGradient
+                  colors={['#08d4c4', '#01ab9d']}
+                  style={styles.signIn}>
+                  <Text style={[styles.textSign, {color: '#fff'}]}>注册</Text>
                 </LinearGradient>
               </TouchableOpacity>
 
               <TouchableOpacity
                 onPress={() => navigation.goBack()}
-                style={[styles.signIn, {
-                  borderColor: '#009387',
-                  borderWidth: 1,
-                  marginTop: 15
-                }]}
-              >
-                <Text style={[styles.textSign, { color: '#009387' }]}>登录</Text>
+                style={[
+                  styles.signIn,
+                  {
+                    borderColor: '#009387',
+                    borderWidth: 1,
+                    marginTop: 15,
+                  },
+                ]}>
+                <Text style={[styles.textSign, {color: '#009387'}]}>登录</Text>
               </TouchableOpacity>
             </View>
           </ScrollView>
@@ -170,13 +167,13 @@ export default Register;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    backgroundColor: '#009387'
+    flex: 1,
+    backgroundColor: '#009387',
   },
   bgImage: {
     flex: 1,
     resizeMode: 'cover',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   header: {
     flex: 1,
@@ -190,20 +187,20 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 20,
-    paddingVertical: 30
+    paddingVertical: 30,
   },
   textHeader: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 30,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   action: {
     flexDirection: 'row',
     marginTop: 5,
     borderBottomWidth: 1,
     borderBottomColor: '#f2f2f2',
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   textInput: {
     flex: 1,
@@ -212,21 +209,21 @@ const styles = StyleSheet.create({
     color: '#05375a',
   },
   textColor: {
-    color: 'green'
+    color: 'green',
   },
   button: {
     alignItems: 'center',
-    marginTop: 30
+    marginTop: 30,
   },
   signIn: {
     width: '100%',
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10
+    borderRadius: 10,
   },
   textSign: {
     fontSize: 18,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });
