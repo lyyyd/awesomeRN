@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -27,11 +27,9 @@ export default class index extends Component {
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-        })}
-        tabBarOptions={{
-          activeTintColor: 'tomato',
+          tabBarActiveTintColor: 'tomato',
           inactiveTintColor: 'gray',
-        }}>
+        })}>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="News" component={NewsScreen} />
         <Tab.Screen name="User" component={UserScreen} />
@@ -39,5 +37,3 @@ export default class index extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({});

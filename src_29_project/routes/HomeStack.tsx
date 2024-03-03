@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import HomeScreen from '../screens/Home';
@@ -29,9 +29,10 @@ export default class HomeStack extends Component {
               shadowOpacity: 0, // 删除 iOS 下的阴影
             },
             headerTintColor: '#fff',
+            // eslint-disable-next-line react/no-unstable-nested-components
             headerRight: () => (
               <TouchableOpacity
-                onPress={() => this.props.navigation.navigate('TakePicture')}>
+                onPress={() => this.props?.navigation.navigate('TakePicture')}>
                 <Text style={{fontSize: 18, color: 'white', marginRight: 10}}>
                   拍照
                 </Text>
@@ -43,5 +44,3 @@ export default class HomeStack extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({});

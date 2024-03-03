@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {NavigationContainer} from '@react-navigation/native';
+import {Provider as StoreProvider} from 'react-redux';
+import store from './src_29_project/redux/store';
 
 // import Index from './src_01_StyleSheet';
 // import Index from './src_02_Flexbox/FlexDirection'
@@ -61,8 +63,8 @@ import {NavigationContainer} from '@react-navigation/native';
 // import Index from './src_25_MaterailTopTabNavigator';
 // import Index from './src_26_NestingNavigation';
 // import Index from './src_27_PassingParameters';
-import Index from './src_28_API';
-// import Index from './src_29_project'
+// import Index from './src_28_API';
+import Index from './src_29_project';
 
 // import Constants from 'expo-constants';
 // console.log(Constants.systemFonts);
@@ -145,9 +147,11 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 export default class App extends Component {
   render() {
     return (
-      <NavigationContainer>
-        <Index />
-      </NavigationContainer>
+      <StoreProvider store={store}>
+        <NavigationContainer>
+          <Index />
+        </NavigationContainer>
+      </StoreProvider>
     );
   }
 }

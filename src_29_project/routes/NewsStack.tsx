@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import NewsScreen from '../screens/News';
@@ -35,5 +35,3 @@ export default class NewsStack extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({});

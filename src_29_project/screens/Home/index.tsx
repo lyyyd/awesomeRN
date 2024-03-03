@@ -103,37 +103,25 @@ export class index extends Component {
           <View style={[styles.container]}>
             <TouchableOpacity onPress={() => alert('扫一扫')}>
               <View style={[styles.itemBase]}>
-                <Ionicons
-                  name="scan-outline"
-                  size={40}
-                  color={'white'}></Ionicons>
+                <Ionicons name="scan-outline" size={40} color={'white'} />
                 <Text style={[styles.fontBase]}>扫一扫</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={[styles.itemBase]}>
-                <Ionicons
-                  name="qr-code-outline"
-                  size={40}
-                  color={'white'}></Ionicons>
+                <Ionicons name="qr-code-outline" size={40} color={'white'} />
                 <Text style={[styles.fontBase]}>付款码</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={[styles.itemBase]}>
-                <Ionicons
-                  name="trail-sign-outline"
-                  size={40}
-                  color={'white'}></Ionicons>
+                <Ionicons name="trail-sign-outline" size={40} color={'white'} />
                 <Text style={[styles.fontBase]}>出行</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={[styles.itemBase]}>
-                <Ionicons
-                  name="card-outline"
-                  size={40}
-                  color={'white'}></Ionicons>
+                <Ionicons name="card-outline" size={40} color={'white'} />
                 <Text style={[styles.fontBase]}>卡包</Text>
               </View>
             </TouchableOpacity>
