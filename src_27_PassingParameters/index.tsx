@@ -1,10 +1,10 @@
-import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
-import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react';
+import {StyleSheet, Text, View, Button} from 'react-native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-function HomeScreen({ navigation }) {
+function HomeScreen({navigation}) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Home Screen</Text>
       <Button
         title="Go to Details"
@@ -20,11 +20,11 @@ function HomeScreen({ navigation }) {
   );
 }
 
-function DetailsScreen({ route, navigation }) {
+function DetailsScreen({route, navigation}) {
   /* 2. Get the param */
-  const { itemId, otherParam } = route.params;
+  const {itemId, otherParam} = route.params;
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Details Screen</Text>
       <Text>itemId: {JSON.stringify(itemId)}</Text>
       <Text>otherParam: {JSON.stringify(otherParam)}</Text>
@@ -42,7 +42,7 @@ function DetailsScreen({ route, navigation }) {
   );
 }
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 export default function index() {
   return (
@@ -50,7 +50,7 @@ export default function index() {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Details" component={DetailsScreen} />
     </Stack.Navigator>
-  )
+  );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
